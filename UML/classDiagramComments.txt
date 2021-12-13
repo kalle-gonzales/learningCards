@@ -1,0 +1,39 @@
+MainClass
+Methods
+- sideToShow: int      [COMMENT: 0: front only, 1: back only, 2: random]
++ winStreak: int       [COMMENT: a win is when you get more cards right than wrong]
++ perfectStreak: int   [COMMENT: a day is considered perfect when all question were answered correctly]
++ usageStreak: int     [COMMENT: number of consecutive days of usage]
+Attributes
+- askCards(sideToAsk: int = 0, out [stats, mistakes]: Array) [COMMENT for Method: aggregates Mistakes, COMMENT for sideToAsk: 0: front, 1: back, 2: random, COMMENT for out: [[numberOfCorrectAnswers, mistakes], Cards] ] 
++ addCard()            [COMMENT: prompt for front, prompt for back]
++ deleteCard()         [COMMENT: ask for front to identify card, show front and back, prompt for confirmation]
++ multiCreate(newVocabulary: List, newCards: List)                         [COMMENT to newVocabulary: List of Pairs having the front and back as values]
++ autoGenerate(quanitity: int, url: string = "leo.cc", out newCards: List) [COMMENT to quantity: read {quantity} random words from leo and make a card out of each. Carefull: what translation do we want to use?]
++ getAvailableCards                                                        [COMMNET a card is available when its last call is at least <box> days ago]
+
+
+CARD
+Methods
++ askCard(fron: book, out answeredCorrectly: bool = false)  [COMMENT showCard: shows the front (or the back), handleUserInput: waits for user input, parses it, compares it with back (or front), showOtherSide, updateCard: updates history, box and upNext, updateStatistics]
++create(fron: string, back: string, out Card: card)         [COMMENT creates a new card having empty history, box 0 and upNext today]
+  
+
+
+
+MainClass
+METHODS
+sideToShow    [COMMENT: 0: front only, 1: back only, 2: random]
+
+ATTRIBUTES
+askCards      [COMMENT for Method: aggregates Mistakes, COMMENT for sideToAsk: 0: front, 1: back, 2: random, COMMENT for out: [[numberOfCorrectAnswers, mistakes], Cards] ] 
+addCard       [COMMENT: prompt for front, prompt for back]
+deleteCard    [COMMENT: ask for front to identify card, show front and back, prompt for confirmation]
+multiCreate   [COMMENT to newVocabulary: List of Pairs having the front and back as values]
+autoGenerate  [COMMENT to quantity: read {quantity} random words from leo and make a card out of each. Carefull: what translation do we want to use?]
+
+
+Card
+METHODS
+askCard       [COMMENT showCard: shows the front (or the back), handleUserInput: waits for user input, parses it, compares it with back (or front), showOtherSide, updateCard: updates history, box and upNext, updateStatistics]
+create        [COMMENT creates a new card having empty history, box 0 and upNext today]
