@@ -13,7 +13,7 @@ class Word:
 
   # creates a new instance of the class Word
   #
-  # takes a value (String) and a lanugage (Int: 0 = German, 1 = English, 2 = Spanish, 3 = Japanese)
+  # takes a value (String) and a lanugage (Int: 0 = German, 1 = English, 2 = Spanish, 3 = Japanese, etc)
   # Initialises box to be 0, history and translations to None and next_up to datetime.now
   def __init__(self, value, language):
     self.value = value

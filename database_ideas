@@ -1,0 +1,28 @@
+Database_Language_0
+int key | string value | date next_up
+
+Database_Language_1
+int key | string value | date next_up
+
+Database_Language_n
+int key | string value | date next_up
+
+Database_Connect
+int key | language_0 | language_1 | language_n
+
+int key | string value 
+1       | Schuh        
+
+Database_Language_1
+int key | string value | Wortschatz
+1       | shoe         | <STD>
+
+Database_Language_2
+int key | string value 
+1       | hola         
+2       | zapato       
+
+Database_Connect (auf User-Ebene)
+int key | date next_up |  language_0 | language_1 | language_2 | box | history
+1       | <morgen>     |  1          | /          | 2          | 0   | null
+2       | <morgen>     |  1          | 1          | /          | 0   | null
